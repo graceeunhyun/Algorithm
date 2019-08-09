@@ -1,11 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <array>
 
 using namespace std;
 
 //참고 사이트 :  https://yongku.tistory.com/entry/%EB%B0%B1%EC%A4%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98BOJ-1260%EB%B2%88-DFS%EC%99%80-BFSC
-#define MAX 1001;  
+#define MAX 1001	  
 
 int n, m, start;
 //array 를 보통 저렇게 MAX 로 선언한 
@@ -16,12 +17,18 @@ void dfs(int x)
 {
 	//dfs 
 	cout<<x<<'\n';
+	//방문했는지 값 변경
+	check[x] == 1; 
+	for(int i =0 ; i<n ; i ++)
+	{
+		if(A[x][n] == 1 && check[x] ==1 )
+			dfs[n];
+	}
 	
 }
 
 int main(void)
 {
-	int n, m, start;
 	cin>>n>>m>>start;
 	int a[10][10];
 	//여기서 범위를 어떻게 해야하는지 고민.. 
