@@ -6,7 +6,8 @@ using namespace std;
 
 void dfs(int x)
 {
-	
+	//dfs 
+	cout<<x<<'\n';
 }
 
 int main(void)
