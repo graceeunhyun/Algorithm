@@ -27,6 +27,16 @@ void dfs(int x)
 	
 }
 
+void bfs(int x)
+{
+	//bfs 는 queue 로 설정해서 보여줌.  
+	
+	cout<<x<<'\n';
+	check[x] ==1;
+	
+	
+}
+
 int main(void)
 {
 	cin>>n>>m>>start;
