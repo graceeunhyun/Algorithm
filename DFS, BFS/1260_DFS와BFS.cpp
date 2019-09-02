@@ -4,10 +4,20 @@
 
 using namespace std;
 
+a[i][j]; ///이렇게 array 를 생성하고  
+
 void dfs(int x)
 {
+	cout<<x<<'\n';
 	
+	if(dfs>0)	
+	{
+		// 
+		
+	}
 }
+
+
 
 int main(void)
 {
