@@ -11,21 +11,22 @@ int visited[50][50]={0,};
 // 배추가 잇는 위치를 모두 연결한 경우를 하나의 구역이라고 생각하고 이 구역이 몇개있는지 구하는 문제
 // DFS 를 통해 배추가 놓인 지역을 방문해서, 왼쪽과 오른쪽 구역을 탐색.. 
 
-void dfs(int y, int x)
+void dfs(int x, int y)
 {
 	for(int i = 0; i< 4; i++)
 	{
 		//상하, 좌우를 돌기 위해 index 0 부터 3까지 도는 것! 
-		int curY = dy[i] + y;
+		
 		int curX = dx[i] + x;
+		int curY = dy[i] + y;
 		
 		//구역을 탐색해야한다. 
 		if(curY <0 || curY >= N || curX <=0 || curX >= M)
 			continue;    //continue: 계속해서 탐색.  
 		
-		if(arr[curY][curX] && ! visited[curX][curY])
+		if(arr[curY][curX] && !visited[curX][curY])
 		{
-			visted[curX][curY]++;
+			visited[curX][curY]++;
 			dfs(curY, curX);
 		}
 				
@@ -53,9 +54,9 @@ int main(void)
 			
 			for(int j = 0; j<N; j++)
 			{
-				if(arr[i][j] == 1 )
+				if(arr[i][j] == 1 && visited[i][j] == 0)
 					count++;
-					dfs(j, i);
+					dfs(i,j);
 			}
 		}
 	}
